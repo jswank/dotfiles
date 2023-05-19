@@ -1,0 +1,34 @@
+# scalene.net
+folder-hook . 'set folder=~/mail/fm/ from="Jason Swank <jason@scalene.net>" record=+Sent.`date +%Y`.`date +%m` postponed=+Drafts hostname=scalene.net' 
+folder-hook . 'save-hook .* +Received.`date +%Y`.`date +%m`'
+folder-hook . 'set smtp_url="smtps://jswank@fastmail.fm@smtp.fastmail.com:465/" smtp_pass="7smmrklxlq3f4euz"
+#folder-hook . 'set sendmail = "$HOME/bin/mymail"'
+
+folder-hook ~/mail/fm 'set folder=~/mail/fm/ from="Jason Swank <jason@scalene.net>" record=+Sent.`date +%Y`.`date +%m` postponed=+Drafts hostname=scalene.net' 
+folder-hook ~/mail/fm 'save-hook .* +Received.`date +%Y`.`date +%m`'
+folder-hook ~/mail/fm 'set smtp_url="smtps://jswank@fastmail.fm@smtp.fastmail.com:465/" smtp_pass="7smmrklxlq3f4euz"
+#folder-hook ~/mail/fm 'set sendmail = "$HOME/bin/mymail"'
+
+# personal markup
+color index brightwhite default "~C jason@scalene.net"
+color index cyan default "~f mfranzini@fastmail.fm"
+# cub scouts
+color index yellow default "~f Hayden"
+# theo's school
+color index yellow default "~f hcollins912@yahoo.com"
+color index yellow default "~f kelly.gunn@fayette.kyschools.us"
+color index yellow default "~f james.beers@fayette.kyschools.us"
+color index yellow default "~f jemsky@twc.com"
+color index yellow default "~f carla.pleasant@fayette.kyschools.us"
+color index yellow default "~f laurie.fields@fayette.kyschools.us"
+# ollies's school
+color index yellow default "~f info@providencemontessoriky.org"
+# quakers
+color index green default "~f rjmq47@twc.com"
+color index green default "~f Douglas_Griggs@georgetowncollege.edu"
+color index green default "~f gmkpah@aol.com"
+color index green default "~f bneale@twc.com"
+color index green default "~f mmhill1951@gmail.com"
+color index black green "~C info@lexingtonfriends.org"
+#color index cyan default "~f Blancet"
+

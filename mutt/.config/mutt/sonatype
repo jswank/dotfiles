@@ -1,0 +1,46 @@
+# sonatype folder hooks
+folder-hook ~/mail/sonatype 'unset record'
+folder-hook ~/mail/sonatype 'set folder=~/mail/sonatype from="Jason Swank <jswank@sonatype.com>" postponed="+drafts" hostname=sonatype.com' 
+folder-hook ~/mail/sonatype 'set smtp_url="smtp://jswank@sonatype.com@smtp.gmail.com:587/" smtp_pass="etfsjjivqcrnliuu"'
+#folder-hook ~/mail/sonatype 'set sendmail = "$HOME/bin/mymail"'
+
+
+# Sonatype markup
+
+#color index grey default "~C jswank@sonatype.com"
+color index yellow default "~f .*@sonatype.com"
+color index cyan default "~t jswank@sonatype.com ~f .*@sonatype.com"
+color index magenta default "~f peckman"
+color index magenta default "~f franzini"
+color index magenta default "~f bmayhew"
+color index magenta default "~f tlevett"
+color index magenta default "~f ncook"
+color index magenta default "~f nblair"
+color index magenta default "~f jyoung"
+color index magenta default "~f khayen"
+color index magenta default "~f kwitten"
+color index magenta default "~f mprescott"
+color index magenta default "~f bentmann"
+color index magenta default "~f Damian"
+color index magenta default "~f sangles"
+color index magenta default "~f ajbrown"
+color index white cyan "~f stecker"
+color index white cyan "~f watson"
+color index white cyan "~f briganti"
+color index white cyan "~f jorlina"
+color index white cyan "~f yanko"
+color index white cyan "~f sprochi"
+color index white cyan "~f ethompson"
+color index white cyan "~f amengual"
+color index white cyan "~f mporter"
+color index white cyan "~f sanderson"
+color index white cyan "~f tneeriemer"
+color index brightred default "~f brianf@sonatype.com"
+color index brightred default "~f mhansen@sonatype.com"
+color index brightred default "~f wayne@sonatype.com"
+color index brightred default "~f dmiller@sonatype.com"
+color index brightred default "~f jwhitehouse@sonatype.com"
+color index brightred default "~f dwright@sonatype.com"
+color index white red "~t alerts@sonatype.com"
+color index white red "~f PagerDuty"
+color index white red "~C security@sonatype.com"
