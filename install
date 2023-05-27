@@ -2,11 +2,12 @@
 #
 # Install my dotfiles.
 #
-which stow >/dev/null 2>&1
 
+which stow >/dev/null 2>&1
 if [ $? -ne 0 ]; then
   echo "stow is not installed" >&2
   exit 1
 fi
 
-ls -d */ | tr -d / | xargs stow -R
+rm $HOME/.zshrc $HOME/.profile
+ls -d */ | tr -d / | xargs stow -t $HOME -R
