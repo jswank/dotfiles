@@ -4,4 +4,4 @@
 #
 
 rm $HOME/.zshrc $HOME/.profile
-ls -d */ | tr -d / | xargs ./stow.sh -t $HOME -R
+find * -maxdepth 0 -type d | xargs -I{} ./stow.sh -t $HOME {}
