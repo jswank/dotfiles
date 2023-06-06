@@ -4,10 +4,6 @@ set softtabstop=2
 set expandtab
 set autoindent
 
-
-" arrows render badly on dragonflybsd
-let NERDTreeDirArrows=0
-
 set backspace=indent,eol,start
 
 set t_Co=16
@@ -23,8 +19,6 @@ set guioptions-=T
 
 "use semicolon as colon for commands
 nmap ; :
-
-"execute pathogen#infect()
 
 "disable mouse support (nvim)
 set mouse=
@@ -48,6 +42,27 @@ set wildmenu " visual auto-complete
 set showmatch
 set cursorline
 
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" netrw config
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" NOW WE CAN:
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netrw-browse-maps| for more mappings
+
+
+"
+" GO stuff
+"
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
 
@@ -66,6 +81,8 @@ let g:hcl_fmt_autosave = 1
 let g:tf_fmt_autosave = 1
 let g:nomad_fmt_autosave = 1
 
+" ancient stuff
+"
 "autocmd BufRead,BufNewFile *.go set makeprg=go\ build
 "map <leader>gr <ESC>:!gorun %<CR>
 
