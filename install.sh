@@ -3,5 +3,11 @@
 # Install my dotfiles.
 #
 
-rm $HOME/.zshrc $HOME/.profile
-find * -maxdepth 0 -type d | xargs -I{} ./stow.sh -t $HOME {}
+STOW=$(which stow)
+if [ -z "$STOW" ]; then
+  STOW=./stow.sh
+fi
+
+rm -f $HOME/.zshrc $HOME/.profile >/dev/null 2>&1
+
+find * -maxdepth 0 -type d | xargs -I{} $STOW -t "$HOME" {}
